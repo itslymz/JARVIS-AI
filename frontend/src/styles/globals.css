@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* JARVIS Theme */
+:root {
+  --color-dark: #0a0e27;
+  --color-darker: #050810;
+  --color-accent: #00d9ff;
+  --color-gold: #ffd700;
+  --color-danger: #ff4444;
+  --color-success: #44ff44;
+  --color-warning: #ffaa00;
+}
+
+body {
+  @apply bg-jarvis-dark text-white font-sans;
+  color-scheme: dark;
+}
+
+/* Smooth transitions */
+* {
+  @apply transition-colors duration-200;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  @apply w-2 h-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-jarvis-darker;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-jarvis-accent rounded hover:bg-jarvis-gold;
+}
+
+/* Accent text */
+.text-accent {
+  @apply text-jarvis-accent;
+}
+
+.text-gold {
+  @apply text-jarvis-gold;
+}
+
+/* Buttons */
+.btn {
+  @apply px-4 py-2 rounded font-semibold transition-all duration-200;
+}
+
+.btn-primary {
+  @apply btn bg-jarvis-accent text-jarvis-dark hover:shadow-lg hover:shadow-jarvis-accent;
+}
+
+.btn-secondary {
+  @apply btn border border-jarvis-accent text-jarvis-accent hover:bg-jarvis-accent hover:text-jarvis-dark;
+}
+
+.btn-danger {
+  @apply btn bg-jarvis-danger text-white hover:shadow-lg hover:shadow-jarvis-danger;
+}
+
+/* Cards */
+.card {
+  @apply bg-jarvis-darker border border-jarvis-accent/20 rounded-lg p-4;
+}
+
+/* Input */
+input,
+textarea,
+select {
+  @apply bg-jarvis-darker border border-jarvis-accent/30 rounded px-3 py-2 text-white focus:outline-none focus:border-jarvis-accent;
+}
